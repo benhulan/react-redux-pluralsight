@@ -13,7 +13,6 @@ function App() {
   return (
     <div className="container-fluid">
       <Header />
-      <ToastContainer autoClose="2500" hideProgressBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
@@ -22,6 +21,7 @@ function App() {
         <Route path="/course" component={ManageCoursePage} />
         <Route component={PageNotFound} />
       </Switch>
+      <ToastContainer autoClose={3000} hideProgressBar />
     </div>
   );
 }
